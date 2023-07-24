@@ -91,7 +91,7 @@ export default function Login({
                     </label>
                 </div>
 
-                <div className="flex justify-between mt-4 py-3 px-3">
+                <div className="flex items-center justify-between mt-4 py-3 px-3">
                     {canResetPassword && (
                         <Link
                             href={route("password.request")}

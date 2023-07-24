@@ -107,7 +107,7 @@ export default function Register() {
                     />
                 </div>
 
-                <div className="flex items-center justify-between mt-4 px-10 py-10">
+                <div className="flex items-center justify-between mt-5 px-5">
                     <Link
                         href={route("login")}
                         className="hover:text-lg duration-300 hover:underline text-sm text-white font-mono hover:text-orange-400"
