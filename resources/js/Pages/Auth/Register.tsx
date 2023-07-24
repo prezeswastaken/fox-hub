@@ -107,7 +107,7 @@ export default function Register() {
                     />
                 </div>
 
-                <div className="flex items-center justify-between mt-4 px-5 py-5">
+                <div className="flex items-center justify-between mt-4 px-10 py-10">
                     <Link
                         href={route("login")}
                         className="hover:text-lg duration-300 hover:underline text-sm text-white font-mono hover:text-orange-400"
@@ -115,7 +115,7 @@ export default function Register() {
                         Already registered?
                     </Link>
 
-                    <PrimaryButton className="ml-4" disabled={processing}>
+                    <PrimaryButton className="" disabled={processing}>
                         Register
                     </PrimaryButton>
                 </div>

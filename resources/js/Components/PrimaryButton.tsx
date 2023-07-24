@@ -10,7 +10,7 @@ export default function PrimaryButton({
         <button
             {...props}
             className={
-                `text-white uppercase underline hover:no-underline hover:border hover:border-orange-400 hover:text-orange-400 rounded-lg px-2 py-2 hover:scale-150 duration-300 ${
+                `text-white uppercase underline hover:no-underline hover:border hover:border-orange-400 hover:text-orange-400 rounded-lg px-2 py-2 duration-300 border border-transparent ${
                     disabled && "opacity-25"
                 } ` + className
             }
