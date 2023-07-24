@@ -21,7 +21,7 @@ export default function Guest({ children }: PropsWithChildren) {
             <HelloBox />
 
             {children && (
-                <div className="w-full sm:max-w-md mt-6 px-6 py-4 border border-gray-800 shadow-lg shadow-gray-800 overflow-hidden sm:rounded-lg">
+                <div className="w-full sm:max-w-md mt-6 px-6 py-4 border border-orange-900 shadow-sm  overflow-hidden sm:rounded-lg">
                     {children}
                 </div>
             )}
