@@ -10,7 +10,7 @@ export default function NormalLayout({ children }: Props) {
         <div className="flex flex-col text-white p-5 bg-black min-h-screen font-mono">
             <TopPanel />
 
-            <div className="flex justify-center">{children && children}</div>
+            <div className="flex flex-col p-5">{children && children}</div>
         </div>
     );
 }

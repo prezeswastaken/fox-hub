@@ -1,8 +1,27 @@
-import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
-import { Head } from "@inertiajs/react";
-import { PageProps } from "@/types";
 import NormalLayout from "@/Layouts/NormalLayout";
 
-export default function Dashboard({ auth }: PageProps) {
-    return <NormalLayout>You logged in! Finally...</NormalLayout>;
+type Props = {
+    photoLink: string;
+};
+
+export default function Dashboard({ photoLink }: Props) {
+    return (
+        <NormalLayout>
+            <div className="flex px-5">
+                <p>You logged in! Finally...</p>
+            </div>
+            <div className="flex justify-center  p-5 max-w-fit self-center">
+
+                <div className="flex flex-col p-5 justify-center">
+                    {photoLink}
+                    <img
+                        src={photoLink}
+                        className="max-h-80 max-w-sm"
+                        alt="No foxes for you today!"
+                    />
+                </div>
+
+            </div>
+        </NormalLayout>
+    );
 }

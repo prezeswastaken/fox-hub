@@ -13,8 +13,8 @@ export default function TopPanel() {
             </div>
             <div className="flex px-20 gap-20">
                 <NavLink
-                    href={route("dashboard")}
-                    active={route().current("dashboard")}
+                    href={route("foxes")}
+                    active={route().current("foxes")}
                 >
                     Home
                 </NavLink>
