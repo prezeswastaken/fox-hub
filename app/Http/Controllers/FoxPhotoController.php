@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\PhotoGetter;
 use App\Http\Requests\StoreFoxPhotoRequest;
 use App\Http\Requests\UpdateFoxPhotoRequest;
 use App\Models\FoxPhoto;
@@ -14,7 +15,7 @@ class FoxPhotoController extends Controller
      */
     public function index()
     {
-        $photoLink = 'https://randomfox.ca/images/' . rand(0, 123) . '.jpg';
+        $photoLink = PhotoGetter::getPhotoLink();
         return Inertia::render(
             'Dashboard',
             ['photoLink' => $photoLink]
