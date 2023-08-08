@@ -5,6 +5,7 @@ type Props = {
 };
 
 export default function Dashboard({ photoLink }: Props) {
+    // I did this
     return (
         <NormalLayout>
             <div className="flex px-5">
