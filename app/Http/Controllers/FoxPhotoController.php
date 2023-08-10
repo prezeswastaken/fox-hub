@@ -6,6 +6,7 @@ use App\Helpers\PhotoGetter;
 use App\Http\Requests\StoreFoxPhotoRequest;
 use App\Http\Requests\UpdateFoxPhotoRequest;
 use App\Models\FoxPhoto;
+use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 
 class FoxPhotoController extends Controller
@@ -39,6 +40,13 @@ class FoxPhotoController extends Controller
      */
     public function store(StoreFoxPhotoRequest $request)
     {
+
+        //dd($request);
+        $validated = $request -> validated();
+        Auth::user()->photos()->create($validated);
+
+        $photoLink = PhotoGetter::getPhotoLink();
+        return back();
     } //end store()
 
 

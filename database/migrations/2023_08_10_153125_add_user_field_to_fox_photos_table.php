@@ -10,9 +10,9 @@ return new class () extends Migration {
      */
     public function up(): void
     {
-        Schema::create('fox_photos', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::table('fox_photos', function (Blueprint $table) {
+            $table->string('url');
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
         });
     }
 
@@ -21,6 +21,9 @@ return new class () extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('fox_photos');
+        Schema::table('fox_photos', function (Blueprint $table) {
+            $table->dropColumn('url');
+            $table->dropColumn('user_id');
+        });
     }
 };

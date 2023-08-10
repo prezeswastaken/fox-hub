@@ -42,7 +42,9 @@ Route::middleware('auth')->group(
     }
 );
 
+
 Route::get('/foxes', [FoxPhotoController::class, 'index'])->name('foxes')
-    ->middleware("auth");
+->middleware("auth");
+Route::post('/foxes/store', [FoxPhotoController::class, 'store'])->name('store.foxes');
 
 require __DIR__ . '/auth.php';

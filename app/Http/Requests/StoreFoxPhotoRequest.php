@@ -11,7 +11,7 @@ class StoreFoxPhotoRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,8 +21,8 @@ class StoreFoxPhotoRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            //
-        ];
+        return ([
+            'url' => 'required',
+        ]);
     }
 }
