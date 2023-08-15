@@ -37,7 +37,7 @@ export default function Login({
             <Head title="Log in" />
 
             {status && (
-                <div className="mb-4 font-medium text-sm text-green-600">
+                <div className="mb-4 text-sm font-medium text-green-600">
                     {status}
                 </div>
             )}
@@ -51,7 +51,7 @@ export default function Login({
                         type="email"
                         name="email"
                         value={data.email}
-                        className="mt-1 block w-full"
+                        className="block mt-1 w-full"
                         autoComplete="username"
                         isFocused={true}
                         onChange={(e) => setData("email", e.target.value)}
@@ -68,7 +68,7 @@ export default function Login({
                         type="password"
                         name="password"
                         value={data.password}
-                        className="mt-1 block w-full"
+                        className="block mt-1 w-full"
                         autoComplete="current-password"
                         onChange={(e) => setData("password", e.target.value)}
                     />
@@ -85,17 +85,17 @@ export default function Login({
                                 setData("remember", e.target.checked)
                             }
                         />
-                        <span className="ml-2 text-sm text-white font-mono">
+                        <span className="ml-2 font-mono text-sm text-white">
                             Remember me
                         </span>
                     </label>
                 </div>
 
-                <div className="flex items-center justify-between mt-4 py-3 px-3">
+                <div className="flex justify-between items-center py-3 px-3 mt-4">
                     {canResetPassword && (
                         <Link
                             href={route("password.request")}
-                            className="hover:text-lg hover:underline text-sm text-white font-mono hover:text-orange-400 duration-300"
+                            className="font-mono text-sm text-white duration-300 hover:text-lg hover:text-orange-400 hover:underline"
                         >
                             Forgot your password?
                         </Link>
