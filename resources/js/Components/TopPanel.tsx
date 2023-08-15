@@ -5,13 +5,13 @@ import NavLink from "./NavLink";
 
 export default function TopPanel() {
     return (
-        <div className="flex flex-col p-5 m-5 gap-5">
-            <div className="flex justify-between bg-red items-center">
+        <div className="flex flex-col gap-5 p-5 m-5">
+            <div className="flex justify-between items-center bg-red">
                 <ApplicationLogo />
 
                 <ProfileEditOrLogout />
             </div>
-            <div className="flex px-20 gap-20">
+            <div className="flex gap-20 px-20">
                 <NavLink
                     href={route("foxes")}
                     active={route().current("foxes")}
@@ -19,14 +19,8 @@ export default function TopPanel() {
                     Home
                 </NavLink>
                 <NavLink
-                    href={route("profile.edit")}
-                    active={route().current("profile.edit")}
-                >
-                    Get new foxes!
-                </NavLink>
-                <NavLink
-                    href={route("profile.edit")}
-                    active={route().current("profile.edit")}
+                    href={route("foxes.show")}
+                    active={route().current("foxes.show")}
                 >
                     Your foxes
                 </NavLink>

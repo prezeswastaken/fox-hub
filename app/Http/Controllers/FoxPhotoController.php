@@ -55,6 +55,8 @@ class FoxPhotoController extends Controller
      */
     public function show(FoxPhoto $foxPhoto)
     {
+        $photos = Auth::user()->photos()->get();
+        return Inertia::render('Show', ['photos' => $photos]);
     } //end show()
 
 

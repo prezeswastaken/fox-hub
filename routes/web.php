@@ -46,5 +46,7 @@ Route::middleware('auth')->group(
 Route::get('/foxes', [FoxPhotoController::class, 'index'])->name('foxes')
 ->middleware("auth");
 Route::post('/foxes/store', [FoxPhotoController::class, 'store'])->name('store.foxes');
+Route::get('/foxes/show', [FoxPhotoController::class, 'show'])->name('foxes.show')
+->middleware("auth");
 
 require __DIR__ . '/auth.php';
