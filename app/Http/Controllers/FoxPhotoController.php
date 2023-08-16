@@ -41,6 +41,7 @@ class FoxPhotoController extends Controller
     public function store(StoreFoxPhotoRequest $request)
     {
 
+        $request->session()->flash('message', 'Photo has been saved!');
         //dd($request);
         $validated = $request -> validated();
         Auth::user()->photos()->create($validated);
