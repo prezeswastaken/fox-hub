@@ -30,11 +30,6 @@ export default function Show({ photos }: Props) {
                         delete
                     </Link>
                 </PrimaryButton>
-                <PrimaryButton>
-                    <Link method="get" href={route("foxes.index")} as="button">
-                        chuj
-                    </Link>
-                </PrimaryButton>
             </div>
         </div>
     ));
