@@ -18,7 +18,7 @@ export default function Dashboard({ photoLink }: Props) {
                             <img
                                 src={photoLink}
                                 className="max-w-sm max-h-80 shadow-lg shadow-black"
-                                alt="No foxes for you today!"
+                                alt="Error loading image, try again!"
                             />
                         </div>
                         <GetNewPhotoMenu photoLink={photoLink} />

@@ -2,9 +2,11 @@ import DangerButton from "@/Components/DangerButton";
 import PrimaryButton from "@/Components/PrimaryButton";
 import SecondaryButton from "@/Components/SecondaryButton";
 import NormalLayout from "@/Layouts/NormalLayout";
+import { Link } from "@inertiajs/react";
 
 type Photo = {
     url: string;
+    id: number;
 };
 
 type Props = {
@@ -19,8 +21,20 @@ export default function Show({ photos }: Props) {
                 className="flex object-cover flex-col justify-end w-80 h-80 rounded"
             />
             <div className="flex absolute bottom-0 left-0 justify-between items-center py-2 px-2 w-full bg-gray-500 bg-opacity-50">
-                <PrimaryButton>delete</PrimaryButton>
-                <PrimaryButton>save</PrimaryButton>
+                <PrimaryButton>
+                    <Link
+                        preserveScroll
+                        method="delete"
+                        href={route("foxes.destroy", photo.id)}
+                    >
+                        delete
+                    </Link>
+                </PrimaryButton>
+                <PrimaryButton>
+                    <Link method="get" href={route("foxes.index")} as="button">
+                        chuj
+                    </Link>
+                </PrimaryButton>
             </div>
         </div>
     ));
