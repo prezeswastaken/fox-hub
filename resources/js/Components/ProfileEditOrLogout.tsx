@@ -7,16 +7,16 @@ export function ProfileEditOrLogout() {
                 href={route("logout")}
                 method="post"
                 as="button"
-                className="flex flex-row-reverse group gap-5 justify-center"
+                className="flex flex-row-reverse gap-5 justify-center group"
             >
-                <p className="text-right text-3xl rounded-full">📴</p>
-                <p className="scale-0 group-hover:scale-100 duration-300">
+                <p className="text-3xl text-right rounded-full">📴</p>
+                <p className="duration-300 scale-0 group-hover:scale-100">
                     Are you sure you wanna logout?
                 </p>
             </Link>
 
             <Link href={route("profile.edit")} className="text-right">
-                <p>(user avatar)</p>
+                <p>Edit your profile</p>
             </Link>
         </div>
     );

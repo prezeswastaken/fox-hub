@@ -1,3 +1,4 @@
+import FlashMessage from "@/Components/FlashMessage";
 import { GetNewPhotoMenu } from "@/Components/GetNewPhotoMenu";
 import NormalLayout from "@/Layouts/NormalLayout";
 
@@ -8,9 +9,6 @@ type Props = {
 export default function Dashboard({ photoLink }: Props) {
     return (
         <NormalLayout>
-            <div className="flex px-5">
-                <p>You logged in! Finally...</p>
-            </div>
             <div className="flex justify-center items-center self-center p-5 max-w-fit">
                 <div className="flex flex-col py-5 justify-center bg-[#1B1B1B] px-10">
                     <div className="flex gap-20 justify-center items-center max-h-fit max-w-fit">
